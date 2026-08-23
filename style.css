@@ -31,3 +31,43 @@ footer{max-width:1180px;margin:auto;padding:30px 28px 45px;border-top:1px solid 
 @keyframes load{from{width:0}to{width:76%}}
 @media(max-width:800px){.nav-links,.nav-cta{display:none}.menu-btn{display:block}.navbar{padding:0 20px}.nav-links.open{display:flex;position:absolute;top:78px;left:0;right:0;background:#0a0b10;flex-direction:column;padding:20px 28px;border-bottom:1px solid var(--line)}.hero{grid-template-columns:1fr;padding-top:50px}.hero-visual{height:380px}.about-grid{grid-template-columns:1fr;gap:30px}.skills-grid{grid-template-columns:1fr 1fr}.projects-grid{grid-template-columns:1fr}.section{padding:85px 20px}.section-heading{display:block}.section-heading p{margin-top:15px}.timeline-item{grid-template-columns:1fr;gap:10px}.cert-grid{grid-template-columns:1fr}.contact-box{padding:45px 20px}.mini-stats{gap:25px}.education-card{gap:20px;align-items:flex-start}.education-card>strong{font-size:20px;white-space:nowrap}footer{padding:25px 20px;gap:15px;flex-direction:column}}
 @media(max-width:480px){.skills-grid{grid-template-columns:1fr}.hero h1{letter-spacing:-2px}.hero-text{font-size:15px}.hero-actions{flex-direction:column;align-items:stretch}.btn{text-align:center}.ai-card{transform:none}.orbit{display:none}}
+
+/* V4 futuristic hero scene */
+.hero-tech-line{display:flex;gap:12px;align-items:center;flex-wrap:wrap;margin:24px 0 0;font-size:12px;font-weight:600;letter-spacing:.7px;color:#d7d9e2}
+.hero-tech-line i{font-style:normal;color:#7462ff}
+.hero-scene{min-height:590px;overflow:visible;position:relative;display:flex;align-items:center;justify-content:center}
+.hero-art{position:relative;width:min(690px,58vw);margin-right:-40px;filter:drop-shadow(0 30px 60px rgba(75,52,170,.22));animation:heroFloat 5.5s ease-in-out infinite}
+.hero-art img{display:block;width:100%;height:auto;mix-blend-mode:screen;opacity:.98;animation:heroBreath 4.5s ease-in-out infinite}
+.scene-glow{position:absolute;width:360px;height:360px;border-radius:50%;background:radial-gradient(circle,rgba(92,69,255,.34),rgba(37,193,255,.09) 42%,transparent 72%);filter:blur(20px);animation:glowPulse 4s ease-in-out infinite}
+.scene-ring{position:absolute;border:1px solid rgba(130,112,255,.25);border-radius:50%;pointer-events:none}
+.ring-one{width:430px;height:430px;animation:spinSlow 18s linear infinite}
+.ring-two{width:520px;height:270px;transform:rotate(-25deg);animation:spinReverse 22s linear infinite}
+.floating-chip{position:absolute;padding:9px 13px;border:1px solid rgba(150,135,255,.28);background:rgba(10,11,18,.62);backdrop-filter:blur(14px);border-radius:100px;color:#d8d7e6;font-size:10px;letter-spacing:.8px;box-shadow:0 10px 30px rgba(0,0,0,.25);z-index:2}
+.floating-chip span{color:#61df9b;margin-left:5px}
+.chip-one{top:18%;right:8%;animation:chipFloat 4s ease-in-out infinite}
+.chip-two{left:5%;top:48%;animation:chipFloat 5s .5s ease-in-out infinite}
+.chip-three{right:2%;bottom:18%;animation:chipFloat 4.6s 1s ease-in-out infinite}
+.scanline{position:absolute;inset:12% 8%;background:linear-gradient(to bottom,transparent 0%,rgba(113,94,255,.12) 50%,transparent 51%);background-size:100% 9px;mix-blend-mode:screen;opacity:.18;pointer-events:none;animation:scan 6s linear infinite}
+@keyframes heroFloat{0%,100%{transform:translate3d(0,0,0) rotate(0deg)}50%{transform:translate3d(0,-10px,0) rotate(.35deg)}}
+@keyframes heroBreath{0%,100%{transform:scale(1)}50%{transform:scale(1.012)}}
+@keyframes glowPulse{0%,100%{opacity:.55;transform:scale(.94)}50%{opacity:1;transform:scale(1.06)}}
+@keyframes spinSlow{to{transform:rotate(360deg)}}
+@keyframes spinReverse{to{transform:rotate(-385deg)}}
+@keyframes chipFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes scan{from{background-position:0 -100%}to{background-position:0 100%}}
+@media(max-width:900px){
+  .hero{grid-template-columns:1fr;gap:10px}
+  .hero-scene{min-height:440px;margin-top:-15px}
+  .hero-art{width:min(720px,94vw);margin-right:0}
+  .ring-one,.ring-two{transform:scale(.8)}
+}
+@media(max-width:520px){
+  .hero-scene{min-height:330px}
+  .hero-art{width:108vw;margin-left:-4vw}
+  .floating-chip{font-size:8px;padding:7px 9px}
+  .chip-one{right:3%;top:10%}.chip-two{left:0;top:50%}.chip-three{right:0;bottom:8%}
+  .scene-ring{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+  .hero-art,.hero-art img,.scene-glow,.scene-ring,.floating-chip,.scanline{animation:none!important}
+}

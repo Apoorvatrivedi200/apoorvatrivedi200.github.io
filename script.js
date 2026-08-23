@@ -9,7 +9,6 @@ document.querySelectorAll(".nav-links a").forEach(link => {
   link.addEventListener("click", () => nav.classList.remove("open"));
 });
 
-// Lower-page reveal animations. Hero content is visible immediately.
 const revealTargets = document.querySelectorAll(
   ".section:not(#home), .project-card, .skill-card, .timeline-item, .cert-card, .education-card"
 );
