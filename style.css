@@ -107,7 +107,7 @@ footer{max-width:1180px;margin:auto;padding:30px 28px 45px;border-top:1px solid 
     display: inline-block;
 }
 .iris-project-image {
-    height: 330px;
+    height: 300px;
     width: 100%;
     border-radius: 14px;
     overflow: hidden;
@@ -144,4 +144,15 @@ footer{max-width:1180px;margin:auto;padding:30px 28px 45px;border-top:1px solid 
     .iris-project-info h3 {
         font-size: 32px;
     }
+}
+/* Iris Project Hover Effect */
+.project-card.featured.iris-project {
+    transition: border-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease;
+}
+.project-card.featured.iris-project:hover {
+    border-color: rgba(155, 124, 255, 0.85);
+    box-shadow:
+        0 0 0 1px rgba(155, 124, 255, 0.25),
+        0 0 30px rgba(100, 120, 255, 0.18);
+    transform: translateY(-4px);
 }
