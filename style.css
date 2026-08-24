@@ -146,10 +146,11 @@ footer{max-width:1180px;margin:auto;padding:30px 28px 45px;border-top:1px solid 
     }
 }
 /* Iris Project Hover Effect */
-.project-card.featured.iris-project {
+.project-card.iris-featured {
     transition: border-color 0.35s ease, box-shadow 0.35s ease, transform 0.35s ease;
+    border: 1px solid rgba(255, 255, 255, 0.12);
 }
-.project-card.featured.iris-project:hover {
+.project-card.iris-featured:hover {
     border-color: rgba(155, 124, 255, 0.85);
     box-shadow:
         0 0 0 1px rgba(155, 124, 255, 0.25),
