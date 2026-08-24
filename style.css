@@ -157,3 +157,89 @@ footer{max-width:1180px;margin:auto;padding:30px 28px 45px;border-top:1px solid 
         0 0 30px rgba(100, 120, 255, 0.18);
     transform: translateY(-4px);
 }
+/* ===== Project Image Styling ===== */
+.ai-project,
+.rag-project,
+.sales-project,
+.gesture-project {
+  overflow: hidden;
+  transition:
+    border-color 0.35s ease,
+    box-shadow 0.35s ease,
+    transform 0.35s ease;
+}
+/* Image container */
+.ai-project .project-thumb,
+.rag-project .project-thumb,
+.sales-project .project-thumb,
+.gesture-project .project-thumb {
+  width: 100%;
+  height: 220px;
+  margin-bottom: 24px;
+  border-radius: 14px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(155, 124, 255, 0.18);
+  background: #080910;
+}
+/* Images */
+.ai-project .project-thumb img,
+.rag-project .project-thumb img,
+.sales-project .project-thumb img,
+.gesture-project .project-thumb img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+/* Subtle image zoom */
+.ai-project:hover .project-thumb img,
+.rag-project:hover .project-thumb img,
+.sales-project:hover .project-thumb img,
+.gesture-project:hover .project-thumb img {
+  transform: scale(1.04);
+}
+/* Project card hover */
+.ai-project:hover,
+.rag-project:hover,
+.sales-project:hover,
+.gesture-project:hover {
+  border-color: rgba(155, 124, 255, 0.75);
+  box-shadow:
+    0 0 0 1px rgba(155, 124, 255, 0.18),
+    0 0 30px rgba(100, 80, 255, 0.16);
+  transform: translateY(-4px);
+}
+/* Image border glow on hover */
+.ai-project:hover .project-thumb,
+.rag-project:hover .project-thumb,
+.sales-project:hover .project-thumb,
+.gesture-project:hover .project-thumb {
+  border-color: rgba(155, 124, 255, 0.55);
+}
+/* Keep project content clean */
+.ai-project .project-meta,
+.rag-project .project-meta,
+.sales-project .project-meta,
+.gesture-project .project-meta {
+  position: relative;
+  z-index: 2;
+}
+
+/* ===== Mobile ===== */
+@media (max-width: 700px) {
+  .ai-project .project-thumb,
+  .rag-project .project-thumb,
+  .sales-project .project-thumb,
+  .gesture-project .project-thumb {
+    height: 190px;
+    margin-bottom: 20px;
+  }
+  .ai-project:hover,
+  .rag-project:hover,
+  .sales-project:hover,
+  .gesture-project:hover {
+    transform: translateY(-2px);
+  }
+}
