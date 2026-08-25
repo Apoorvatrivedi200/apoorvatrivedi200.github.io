@@ -243,3 +243,138 @@ footer{max-width:1180px;margin:auto;padding:30px 28px 45px;border-top:1px solid 
     transform: translateY(-2px);
   }
 }
+
+/* ===== Experience Section ===== */
+.experience-timeline {
+  position: relative;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
+.experience-item {
+  position: relative;
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 30px;
+  padding: 30px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(15, 16, 24, 0.72);
+  transition:
+    transform 0.35s ease,
+    border-color 0.35s ease,
+    box-shadow 0.35s ease;
+}
+.experience-item:hover {
+  transform: translateY(-4px);
+  border-color: rgba(155, 124, 255, 0.7);
+  box-shadow:
+    0 0 0 1px rgba(155, 124, 255, 0.15),
+    0 0 30px rgba(100, 80, 255, 0.14);
+}
+/* Timeline marker */
+.experience-marker {
+  position: absolute;
+  top: 32px;
+  left: -6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow:
+    0 0 0 5px rgba(155, 124, 255, 0.08),
+    0 0 18px rgba(155, 124, 255, 0.5);
+}
+/* Date */
+.experience-date {
+  padding-top: 2px;
+}
+.experience-date span {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+  color: var(--accent);
+}
+/* Content */
+.experience-content {
+  min-width: 0;
+}
+.experience-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+.experience-type {
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  color: var(--muted);
+}
+.experience-number {
+  font-size: 11px;
+  color: var(--muted);
+}
+.experience-content h3 {
+  margin: 0 0 8px;
+  font-size: 25px;
+  font-weight: 650;
+  letter-spacing: -0.02em;
+}
+.experience-content h4 {
+  margin: 0 0 15px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--accent);
+}
+.experience-content p {
+  max-width: 720px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.7;
+}
+/* Skills / tags */
+.experience-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 20px;
+}
+.experience-tags span {
+  padding: 7px 11px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.035);
+  color: #c8c9d2;
+  font-size: 11px;
+  transition:
+    border-color 0.25s ease,
+    color 0.25s ease,
+    background 0.25s ease;
+}
+.experience-item:hover .experience-tags span {
+  border-color: rgba(155, 124, 255, 0.3);
+}
+/* ===== Experience Mobile ===== */
+@media (max-width: 700px) {
+  .experience-item {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    padding: 24px;
+  }
+  .experience-marker {
+    left: 15px;
+    top: 25px;
+  }
+  .experience-date {
+    padding-left: 22px;
+  }
+  .experience-content h3 {
+    font-size: 22px;
+  }
+  .experience-content p {
+    font-size: 14px;
+  }
+}
