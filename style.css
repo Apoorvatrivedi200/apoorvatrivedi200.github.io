@@ -378,3 +378,64 @@ footer{max-width:1180px;margin:auto;padding:30px 28px 45px;border-top:1px solid 
     font-size: 14px;
   }
 }
+
+/* =========================================
+   FLOATING HERO CARD — ICON FIX
+   ========================================= */
+.holo-card .icon {
+    width: 38px;
+    height: 38px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    color: #a855f7 !important;
+    opacity: 1 !important;
+}
+.holo-card .icon svg {
+    width: 32px !important;
+    height: 32px !important;
+    display: block;
+    color: inherit !important;
+    opacity: 1 !important;
+    fill: none !important;
+    stroke: currentColor !important;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+    filter: drop-shadow(0 0 6px currentColor);
+}
+/* Python */
+.card-python .icon {
+    color: #8b5cf6 !important;
+}
+.card-python .icon svg {
+    fill: #8b5cf6 !important;
+    stroke: none !important;
+}
+/* RAG */
+.card-rag .icon {
+    color: #a855f7 !important;
+}
+/* AI / ML */
+.card-ai .icon {
+    color: #a855f7 !important;
+}
+/* Automation — blue/purple */
+.card-flow .icon {
+    color: #6366f1 !important;
+}
+/* Data Analytics */
+.card-data .icon {
+    color: #a855f7 !important;
+}
+/* Hover */
+.holo-card:hover .icon {
+    transform: scale(1.12);
+}
+.holo-card .icon {
+    transition: transform 0.3s ease;
+}
+.holo-card:hover .icon svg {
+    filter: drop-shadow(0 0 10px currentColor);
+}
