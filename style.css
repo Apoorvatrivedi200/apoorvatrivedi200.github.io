@@ -439,3 +439,94 @@ footer{max-width:1180px;margin:auto;padding:30px 28px 45px;border-top:1px solid 
 .holo-card:hover .icon svg {
     filter: drop-shadow(0 0 10px currentColor);
 }
+
+/* =========================================
+   SOCIAL ICONS
+   ========================================= */
+.socials {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+.social-link {
+    display: inline-flex !important;
+    align-items: center;
+    gap: 9px;
+    color: #a6a6b3;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+.social-icon {
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* ---------- GitHub ---------- */
+.github-icon {
+    color: #ffffff;
+}
+.github-icon svg {
+    width: 25px !important;
+    height: 25px !important;
+    display: block;
+    fill: currentColor !important;
+    stroke: none !important;
+}
+.github-link:hover {
+    color: #ffffff;
+}
+.github-link:hover .github-icon {
+    transform: scale(1.12);
+    filter: drop-shadow(0 0 7px rgba(255,255,255,0.45));
+}
+
+/* ---------- LinkedIn ---------- */
+.linkedin-icon {
+    width: 27px;
+    height: 27px;
+    border-radius: 4px;
+    background: #0A66C2;
+    color: #ffffff !important;
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 1;
+}
+.linkedin-link:hover {
+    color: #0A66C2;
+}
+.linkedin-link:hover .linkedin-icon {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(10,102,194,0.55);
+}
+
+/* ---------- LeetCode ---------- */
+.leetcode-icon {
+    position: relative;
+    width: 27px;
+    height: 27px;
+    color: #FFA116;
+}
+.leetcode-symbol {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #FFA116;
+    line-height: 1;
+}
+.leetcode-link:hover {
+    color: #FFA116;
+}
+.leetcode-link:hover .leetcode-icon {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 7px rgba(255,161,22,0.55));
+}
+/* Smooth icon animation */
+.social-icon {
+    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+}
