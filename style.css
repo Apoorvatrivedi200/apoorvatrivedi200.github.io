@@ -507,26 +507,24 @@ footer{max-width:1180px;margin:auto;padding:30px 28px 45px;border-top:1px solid 
 
 /* ---------- LeetCode ---------- */
 .leetcode-icon {
-    position: relative;
-    width: 27px;
-    height: 27px;
+    width: 28px;
+    height: 28px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
     color: #FFA116;
 }
-.leetcode-symbol {
-    font-family: Arial, sans-serif;
-    font-size: 24px;
-    font-weight: 700;
-    color: #FFA116;
-    line-height: 1;
+.leetcode-icon svg {
+    width: 27px !important;
+    height: 27px !important;
+    display: block;
+    fill: #FFA116 !important;
+    stroke: none !important;
 }
 .leetcode-link:hover {
     color: #FFA116;
 }
 .leetcode-link:hover .leetcode-icon {
     transform: scale(1.1);
-    filter: drop-shadow(0 0 7px rgba(255,161,22,0.55));
-}
-/* Smooth icon animation */
-.social-icon {
-    transition: transform 0.3s ease, filter 0.3s ease, box-shadow 0.3s ease;
+    filter: drop-shadow(0 0 7px rgba(255, 161, 22, 0.55));
 }
